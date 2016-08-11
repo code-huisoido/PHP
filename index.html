@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>验证码</title>
+</head>
+<body>
+	<form action="./post.php" method="post">
+		<div>
+		<!-- <label>
+			<input type="text" placeholder="验证码" id="captcha_input" onfocus="document.getElementById('captcha_img').src='./captcha.php';document.getElementById('captcha_img').style.display='inline'">
+		</label>
+		
+		<img id="captcha_img" src="" onclick="this.src+=''" style="display:none;cursor:pointer"> -->
+		<label>
+			<input style="padding:6px 12px;margin-top:6px;vertical-align:middle" type="text" placeholder="验证码" name="captcha_input" id="captcha_input">
+		</label>
+		
+		<img id="captcha_img" src="./captcha.php" onclick="this.src+=''" style="cursor:pointer;margin:0;padding:0;" align="middle">
+	</div>
+	</form>
+</body>
+<script type="text/javascript">
+document.getElementById('captcha_input').focus();
+</script>
+</html>
