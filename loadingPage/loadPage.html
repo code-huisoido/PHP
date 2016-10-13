@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title></title>
+	<style>
+        body {
+            background-color: #efeff4
+        }
+        .spinner>div {
+            width: 20px;
+            height: 20px;
+            background-color: #00bfff;
+            margin-left: 10px;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+            animation: bouncedelay 1.4s infinite ease-in-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both
+        }
+        .spinner .bounce1 {
+            -webkit-animation-delay: -.32s;
+            animation-delay: -.32s
+        }
+        .spinner .bounce2 {
+            -webkit-animation-delay: -.16s;
+            animation-delay: -.16s
+        }
+
+        @-webkit-keyframes bouncedelay {
+            0%,80%,to {
+                -webkit-transform: scale(0)
+            }
+
+            40% {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes bouncedelay {
+            0%,80%,to {
+                transform: scale(0);
+                -webkit-transform: scale(0)
+            }
+
+            40% {
+                transform: scale(1);
+                -webkit-transform: scale(1)
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        var _PageHeight = document.documentElement.clientHeight,
+            _PageWidth = document.documentElement.clientWidth;
+        var _LoadingTop = _PageHeight > 45 ? (_PageHeight - 45) / 2 : 0,
+            _LoadingLeft = _PageWidth > 100 ? (_PageWidth - 100) / 2 : 0;
+        var html = '<div class="spinner" id="loadingDiv" style="position:absolute;top:'+_LoadingTop+'px;left:'+_LoadingLeft+'px"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>';
+        document.write(html);
+        window.onload = completeLoading;
+        function completeLoading() {
+            setTimeout(function(){
+                if (document.readyState == "complete") {
+                    var loadingMask = document.getElementById('loadingDiv');
+                    loadingMask.style.display = "none";
+                    var loadingContent = document.getElementById('loadingContent');
+                    loadingContent.style.display = 'block';
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid" id="loadingContent" style="display:none;">
+	hello,world
+</div>
+</body>
+</html>
