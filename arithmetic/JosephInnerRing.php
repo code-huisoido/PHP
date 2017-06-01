@@ -1,6 +1,6 @@
 <?php
 /**
- * 约瑟夫内环算法
+ * 约瑟夫环算法
  * 10个人围成一个圆圈，编号为1~10，从第一号开始报数，报到3的倍数的人离开， 一直数下去，直到最后只有一个人， 求此人编号
  * @Author dinghui
  */
@@ -72,7 +72,7 @@ if (isset($_POST['numbers'])) {
     <title>算法系列</title>
 </head>
 <body>
-    <h2>约瑟夫内环算法</h2>
+    <h2>约瑟夫环算法</h2>
     <p>要求：n个人围成一个圆圈，编号为1~n，从第一号开始报数，报到3的倍数的人离开， 一直数下去，直到最后只有一个人， 求此人编号？</p>
     <form method="post" action="./JosephInnerRing.php">
         <input type="text" value="" placeholder="请输入人数" name="numbers">
