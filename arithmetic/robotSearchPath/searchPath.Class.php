@@ -60,7 +60,7 @@ class Path {
     function searchPath($path = []) {
 
         
-        $this->searchPath($path)
+        $this->searchPath($path);
         array_push($this->multiPath, $path);
     }
 
