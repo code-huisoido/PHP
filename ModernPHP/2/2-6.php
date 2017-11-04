@@ -1,9 +1,13 @@
 <?php
+namespace ModernPHP\Second;
+
+use ModernPHP\Second\Documentable;
+
 class DocumentStore
 {
     protected $data = [];
 
-    public function addDocument(Documenttable $document)
+    public function addDocument(Documentable $document)
     {
         $key = $document->getId();
         $value = $document->getContent();
