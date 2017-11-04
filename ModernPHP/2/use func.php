@@ -1,4 +1,4 @@
 <?php
-use func Sympony\functionName;
+use function Sympony\functionName;
 //书中是use func
 functionName();
